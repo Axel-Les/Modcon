@@ -1,0 +1,157 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RP2040:SC090813 U?
+U 1 1 62B23441
+P 1600 1650
+F 0 "U?" H 2800 2037 60  0000 C CNN
+F 1 "SC090813" H 2800 1931 60  0000 C CNN
+F 2 "IC57_RP2040" H 2800 1890 60  0001 C CNN
+F 3 "" H 1600 1650 60  0000 C CNN
+	1    1600 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62B29135
+P 4600 1500
+F 0 "#PWR?" H 4600 1250 50  0001 C CNN
+F 1 "GND" H 4605 1327 50  0000 C CNN
+F 2 "" H 4600 1500 50  0001 C CNN
+F 3 "" H 4600 1500 50  0001 C CNN
+	1    4600 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62B2A761
+P 750 3450
+F 0 "#PWR?" H 750 3200 50  0001 C CNN
+F 1 "GND" H 755 3277 50  0000 C CNN
+F 2 "" H 750 3450 50  0001 C CNN
+F 3 "" H 750 3450 50  0001 C CNN
+	1    750  3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 1450 4600 1450
+Wire Wire Line
+	4600 1450 4600 1500
+Wire Wire Line
+	1600 3450 750  3450
+Wire Wire Line
+	4000 1750 4400 1750
+Wire Wire Line
+	4000 1850 4400 1850
+Wire Wire Line
+	4000 1950 4400 1950
+Wire Wire Line
+	4000 2050 4400 2050
+Wire Wire Line
+	4000 2150 4400 2150
+Wire Wire Line
+	4000 2250 4400 2250
+Text GLabel 4400 1750 2    50   Input ~ 0
+QSPI_CS
+Text GLabel 4400 1850 2    50   Input ~ 0
+QSPI_SD1
+Wire Wire Line
+	4000 1650 4500 1650
+Wire Wire Line
+	4500 1450 4500 1650
+Text GLabel 4400 1950 2    50   Input ~ 0
+QSPI_SD2
+Text GLabel 4400 2050 2    50   Input ~ 0
+QSPI_SD0
+Text GLabel 4400 2150 2    50   Input ~ 0
+QSPI_SCLK
+Text GLabel 4400 2250 2    50   Input ~ 0
+QSPI_SD3
+Wire Wire Line
+	4000 2350 5150 2350
+Wire Wire Line
+	5150 2350 5150 2200
+Wire Wire Line
+	4000 2550 4200 2550
+Wire Wire Line
+	5350 2550 5350 2350
+Wire Wire Line
+	4000 2450 4200 2450
+Wire Wire Line
+	4200 2450 4200 2550
+Connection ~ 4200 2550
+Wire Wire Line
+	4200 2550 5350 2550
+$Comp
+L power:+3.3V #PWR?
+U 1 1 62B25730
+P 5350 2350
+F 0 "#PWR?" H 5350 2200 50  0001 C CNN
+F 1 "+3.3V" H 5365 2523 50  0000 C CNN
+F 2 "" H 5350 2350 50  0001 C CNN
+F 3 "" H 5350 2350 50  0001 C CNN
+	1    5350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 62B30975
+P 5800 2550
+F 0 "R1" V 5593 2550 50  0000 C CNN
+F 1 "27" V 5684 2550 50  0000 C CNN
+F 2 "" V 5730 2550 50  0001 C CNN
+F 3 "~" H 5800 2550 50  0001 C CNN
+	1    5800 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 62B310D5
+P 5800 2850
+F 0 "R2" V 5593 2850 50  0000 C CNN
+F 1 "27" V 5684 2850 50  0000 C CNN
+F 2 "" V 5730 2850 50  0001 C CNN
+F 3 "~" H 5800 2850 50  0001 C CNN
+	1    5800 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 2650 5500 2650
+Wire Wire Line
+	5500 2650 5500 2550
+Wire Wire Line
+	5500 2550 5650 2550
+Wire Wire Line
+	4000 2750 5500 2750
+Wire Wire Line
+	5500 2750 5500 2850
+Wire Wire Line
+	5500 2850 5650 2850
+Wire Wire Line
+	5950 2550 6250 2550
+Wire Wire Line
+	5950 2850 6250 2850
+Wire Wire Line
+	4000 2850 5400 2850
+Wire Wire Line
+	5400 2850 5400 3000
+Wire Wire Line
+	5400 3000 6250 3000
+Text Label 4850 2350 0    50   ~ 0
++1.1v
+Text Label 6000 3000 0    50   ~ 0
++1.1v
+$EndSCHEMATC
